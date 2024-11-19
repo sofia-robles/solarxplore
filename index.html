@@ -1,13 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WUSTL + Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive and educational solar system website">
+  <title>WUSTL + Vite + React</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <section id="Home"></section>
+  <header>
+    <!-- <logo> -->
+    <nav>
+      <a href="#Home">Home</a>
+      <a href="#Info">Info</a>
+      <a href="#Photo">Photo</a>
+      <a href="#Quiz">Quiz</a>
+      <a href="Subscribe">Subscribe</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section id="planets">
+      <div id="Sun">
+        <h2>Sun</h2>
+        <p>info about the sun</p>
+      </div>
+
+      <div id="Mercury">
+        <h2>Mercury</h2>
+        <p>info about mercury</p>
+      </div>
+
+      <div id="Venus">
+        <h2>Venus</h2>
+        <p>info about venus</p>
+      </div>
+
+      <div id="Earth">
+        <h2>Earth</h2>
+        <p>info about earth</p>
+      </div>
+
+
+      <div id="Mars">
+        <h2>Mars</h2>
+        <p>info about mars</p>
+      </div>
+
+      <div id="Jupiter">
+        <h2>Jupiter</h2>
+        <p>info about jupiter</p>
+      </div>
+
+      <div id="Saturn">
+        <h2>Saturn</h2>
+        <p>info about saturn</p>
+      </div>
+
+      <div id="Uranus">
+        <h2>Uranus</h2>
+        <p>info about uranus</p>
+      </div>
+
+      <div id="Neptune">
+        <h2>Neptune</h2>
+        <p>info about neptune</p>
+      </div>
+    </section>
+
+    <section id="Info"></section>
+    <div id="solar-info">
+      <h1>Solar System</h1>
+      <p>info about the solar system</p>
+    </div>
+
+    <section id="Photo"></section>
+    <div id="day-photo">
+      <div id="api-data"></div>
+    </div>
+
+  </main>
+
+  <section id="Subscribe"></section>
+  <footer>
+    <div id="subs">
+      <h1>Subscribe</h1>
+
+    </div>
+    Copyright &copy; 2024
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label>Name
+          <input type="text" name="name">
+        </label>
+
+        <label>Email
+          <input type="text" name="email">
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Frequency</legend>
+        <select name="frequency" id="frequency">
+          <option>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+        </select>
+      </fieldset>
+      <button type="submit">Subscribe/Submit</button>
+    </form>
+  </footer>
+
+
+
+  <script type="module" src="/src/main.jsx"></script>
+
+
+
+  <script src="script.js"></script>
+</body>
+
 </html>
