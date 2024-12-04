@@ -8,8 +8,20 @@ document.getElementById('fetchData').addEventListener('click', async () => {
 
         if (!response.ok) throw new Error('Failed to fetch data');
         const data = await response.json();
-        } catch (error) {
-            console.error(error);
-            document.getElementById('result').textContent = 'Error fetching data';
-        }
-    });
+    } catch (error) {
+        console.error(error);
+        document.getElementById('result').textContent = 'Error fetching data';
+    }
+});
+
+
+// image file for logo
+const header = document.querySelector('header');
+
+const img = document.createElement('img');
+img.src = 'images/solarxplore.jpg';
+img.alt = 'Solarxplore Logo';
+document.header.appendChild(img);
+//accessable by css
+img.classList.add('logo-img');
+
