@@ -10,4 +10,34 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
+
+  .space {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(ellipse at center, #000 60%, #001f4d 100%);
+    overflow: hidden;
+  }
+
+  .space::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('stars.jpg') repeat;
+    animation: moveStars 50s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes moveStars {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-50%, -50%);
+    }
+  }
+    
   
