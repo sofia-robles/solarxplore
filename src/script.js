@@ -17,14 +17,7 @@ document.getElementById('fetchData').addEventListener('click', async () => {
     }
 });
 
-// Image file for logo
-const header = document.querySelector('header');
 
-const img = document.createElement('img');
-img.src = 'images/solarxplore.jpg';
-img.alt = 'Solarxplore Logo';
-img.classList.add('logo-img'); 
-header.appendChild(img); 
 
 
 document.querySelectorAll('.planet').forEach((planet) => {
@@ -35,4 +28,9 @@ document.querySelectorAll('.planet').forEach((planet) => {
     planet.addEventListener('mouseout', () => {
       planet.style.transform = 'scale(1)';
     });
+});
+
+planets.forEach((planet, index) => {
+  const animationDuration = 5 + index * 2; 
+  planetElement.style.animation = `orbit ${animationDuration}s infinite linear`;
 });
