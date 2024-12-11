@@ -6,7 +6,7 @@
   }
   
   
-  /* body {
+  body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     margin: 0;
@@ -185,18 +185,14 @@
   50% {
     transform: translateY(10px);
   }
-} */
+}
   
   
 
-
-/* testing simple template to fix api */
 #nasa-image {
     max-width: 80%;
     margin: 20px 0;
     border: 2px solid white;
   }
   
-  /* glow animation on planets
-  make stars move in background
-   */
+  
