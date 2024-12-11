@@ -18,14 +18,22 @@ body {
 
 
   
+
 header {
- display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 10px 20px;
-background-color: #333;
-color: #fff;
+  display: flex;
+  background-color: #333; 
+  padding: 10px 20px; 
+  align-items: center;
+  justify-content: space-between; 
+  flex-wrap: wrap;
 }
+
+#logo img {
+  width: 12rem;
+  height: auto;
+}
+
+
 
 nav {
   display: flex;
@@ -36,7 +44,7 @@ nav {
 }
 nav a {
 text-decoration: none;
-color: #00127eff;
+color: #fff;
 font-family: phosphate;
 padding-inline: 1rem;
 max-width: 100%;
@@ -44,7 +52,7 @@ max-width: 100%;
 
 nav a:hover {
 text-decoration: underline;
-color: #28105c;
+color: #000;
 }
 
 
