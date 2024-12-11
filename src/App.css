@@ -1,198 +1,201 @@
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  * {
-    margin: 0;
-  }
-  
-  
-  body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    margin: 0;
-    padding: 0;
-    background: url('images/background/stars.jpg') no-repeat center center fixed;
-    background-size: cover;
-    overflow-x: hidden;
-  }
-  
-  
-    
-  header {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #000;
-    background: linear-gradient(to bottom, white 88%, black);
-    justify-content: space-between;
-    margin-bottom: 10rem;
-  }
-  
-  #links {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    padding: 2rem;
-    
-  }
-#links a {
-  text-decoration: none;
-  color: #00127eff;
-  font-family: phosphate;
-  padding-inline: 1rem;
-  max-width: 100%;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
 }
 
-#links a:hover {
-  text-decoration: underline;
-  color: #28105c;
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background: url('images/background/stars.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
 }
+
+
   
-  .Logo {
-    display: flex;
-    justify-content: center;
-    height: 7rem;
-    margin: 1rem;
-    padding-bottom: 1rem;
-    margin: 2rem;
-    max-width: 100%;
-    
-  }
+header {
+ display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 20px;
+background-color: #333;
+color: #fff;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  padding: 2rem;
   
-  .space {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    max-width: 100%;
-    flex: 1;
-    padding-top: 15rem;
-   
-  }
-  
-  .planet {
-    animation: float 5s ease-in-out infinite;
-    width: 10vw;
-    height: auto;
-    justify-self: center;
-    max-width: 100%;
-    position: relative;
-  
-  }
-  
+}
+nav a {
+text-decoration: none;
+color: #00127eff;
+font-family: phosphate;
+padding-inline: 1rem;
+max-width: 100%;
+}
+
+nav a:hover {
+text-decoration: underline;
+color: #28105c;
+}
+
+
+.space {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  flex: 1;
+  padding-top: 15rem;
+ 
+}
+
+.planet {
+  animation: float 5s ease-in-out infinite;
+  width: 10vw;
+  height: auto;
+  justify-self: center;
+  max-width: 100%;
+  position: relative;
+
+}
+
 
 .planet-info {
-  display: none; 
-  position: absolute;
-  top: 100%; 
-  left: 50%; 
-  transform: translateX(-50%);
-  background-color: rgba(255, 255, 255, 0.8); 
-  color: black;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  white-space: nowrap; 
-  z-index: 10; 
+display: none; 
+position: absolute;
+top: 100%; 
+left: 50%; 
+transform: translateX(-50%);
+background-color: rgba(255, 255, 255, 0.8); 
+color: black;
+padding: 10px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+white-space: nowrap; 
+z-index: 10; 
 }
 .planet:hover {
-  animation: none;
-  transform: none;
+animation: none;
+transform: none;
 }
 
-.planet:hover .planet-info {
-  display: block; 
+
+.planet img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
+
+#Sun {
+grid-column: auto;
+width: 10vw; 
+  justify-self: center;
   
-  .planet img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  #Sun {
-  grid-column: auto;
-  width: 10vw; 
-    justify-self: center;
-    
 }
 
 #Mercury {
-  grid-column: auto;
-  width: 4vw;
-  margin-left: 1rem;
+grid-column: auto;
+width: 4vw;
+margin-left: 1rem;
 }
 
 #Venus {
-  grid-column: auto;
-  width: 5vw;
+grid-column: auto;
+width: 5vw;
 }
 
 #Earth {
-  grid-column: auto;
-  width: 6vw;
+grid-column: auto;
+width: 6vw;
 }
 
 #Mars {
-  grid-column: auto;
-  width: 5vw;
+grid-column: auto;
+width: 5vw;
 }
 
 #Jupiter {
-  grid-column: auto;
-  width: 12vw;
+grid-column: auto;
+width: 12vw;
 }
 
 #Saturn {
-  grid-column: auto;
-  width: 10vw;
+grid-column: auto;
+width: 10vw;
 }
 
 #Uranus {
-  grid-column: auto;
-  width: 8vw;
+grid-column: auto;
+width: 8vw;
 }
 
 #Neptune {
-  grid-column: auto;
-  width: 8vw;
+grid-column: auto;
+width: 8vw;
 }
-  
-  
+
+
 #solar-info {
-  display: flex;
-  color: white;
-  padding-top: 30rem;
-  flex-direction: column;
+display: flex;
+color: white;
+padding-top: 30rem;
+flex-direction: column;
 }
 
-#solar-info h1 {
-  display: flex;
-  justify-content: center;
-  font-size: xxx-large;
+#solar-info,
+#day-photo,
+#subs {
+margin: 20px;
+text-align: center;
 }
 
-#solar-info p {
-  display: flex;
-  justify-content: center;
+@keyframes float {
+0%, 100% {
+  transform: translateY(-10px);
 }
-  
-  @keyframes float {
-  0%, 100% {
-    transform: translateY(-10px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
+50% {
+  transform: translateY(10px);
 }
-  
-  
+}
+
+
 
 #nasa-image {
-    max-width: 80%;
-    margin: 20px 0;
-    border: 2px solid white;
-  }
-  
-  
+  max-width: 80%;
+  margin: 20px;
+  border: 2px solid white;
+border-radius: 20%;
+}
+
+footer {
+padding: 20px;
+background-color: #333;
+color: #fff;
+text-align: center;
+}
+
+button {
+padding: 10px 20px;
+margin: 2rem;
+background-color: #007BFF;
+color: #fff;
+border: none;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #0056b3;
+}
+
