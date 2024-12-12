@@ -40,7 +40,7 @@ nav {
   justify-content: space-between;
   align-self: center;
   padding: 2rem;
-  
+  flex-wrap: wrap;
 }
 nav a {
 text-decoration: none;
@@ -65,7 +65,7 @@ color: #000;
   position: relative;
   max-width: 100%;
   flex: 1;
-  padding-top: 15rem;
+  padding-top: 20rem;
  
 }
 
@@ -205,5 +205,32 @@ cursor: pointer;
 
 button:hover {
 background-color: #0056b3;
+}
+
+
+@media (max-width: 760px) {
+  header {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .space {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  }
+}
+
+#day-photo h1 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#nasa-description {
+  font-size: 1rem;
+  color: #fff;
 }
 

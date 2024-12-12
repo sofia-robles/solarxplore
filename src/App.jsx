@@ -7,6 +7,7 @@ const apiUrl = "https://api.nasa.gov/planetary/apod";
 
 function App() {
   const [nasaData, setNasaData] = useState({ url: "", explanation: "" });
+  const [hoveredPlanet, setHoveredPlanet] = useState(null);
 
 
   useEffect(() => {
@@ -51,19 +52,25 @@ function App() {
       <section id="Home"></section>
 
 
-      <section id="planets">
-          <div className="space">
-            {planets.map((planet) => (
-              <div key={planet.id} id={planet.id} className="planet-container">
-                <img src={planet.img} alt={planet.name} className="planet" />
-                <div className="planet-info">
-                  <h2>{planet.name}</h2>
-                  <p>{planet.info}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section id="planets" className="space">
+          {planets.map((planet) => (
+            <div
+              key={planet.id}
+              className="planet-container"
+              onMouseEnter={() => setHoveredPlanet(planet)}
+              onMouseLeave={() => setHoveredPlanet(null)}
+            >
+              <img src={planet.img} alt={planet.name} />
+            </div>
+          ))}
         </section>
+
+        {hoveredPlanet && (
+          <div className="planet-info">
+            <h2>{hoveredPlanet.name}</h2>
+            <p>{hoveredPlanet.info}</p>
+          </div>
+        )}
 
         <section id="Info">
           <div id="solar-info">
