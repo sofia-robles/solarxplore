@@ -11,7 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  background: url('images/background/stars.jpg') no-repeat center center fixed;
+  background-image: url("/images/background/stars.jpg");
+  background-position: center;
   background-size: cover;
   overflow-x: hidden;
 }
@@ -65,78 +66,81 @@ color: #000;
   position: relative;
   max-width: 100%;
   flex: 1;
-  padding-top: 20rem;
+  padding-top: 30rem;
+  padding-bottom: 30rem;
+  height: auto;
+  margin: 2rem;
  
 }
 
-.planet {
-  animation: float 5s ease-in-out infinite;
-  width: 10vw;
-  height: auto;
-  justify-self: center;
-  max-width: 100%;
+.planet-container {
   position: relative;
-
+  text-align: center;
 }
-
 
 .planet-info {
-display: none; 
-position: absolute;
-top: 100%; 
-left: 50%; 
-transform: translateX(-50%);
-background-color: rgba(255, 255, 255, 0.8); 
-color: black;
-padding: 10px;
-border-radius: 8px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-white-space: nowrap; 
-z-index: 10; 
+  display: none; 
+  position: absolute;
+  top: 110%; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  white-space: nowrap;
 }
-.planet:hover {
-animation: none;
-transform: none;
+.planet-container:hover .planet-info {
+display: block;
 }
 
+.planet-container img:hover {
+  animation: none;
+  transform: none;
+}
 
-.planet img {
+.planet-container img {
   display: block;
   max-width: 100%;
   height: auto;
+  animation: float 5s ease-in-out infinite;
 }
 
 #Sun {
 grid-column: auto;
-width: 10vw; 
+width: 14vw; 
   justify-self: center;
+  margin-left: 1rem;
   
 }
 
 #Mercury {
 grid-column: auto;
-width: 4vw;
-margin-left: 1rem;
+width: 5vw;
+margin-left: 2.5rem;
 }
 
 #Venus {
 grid-column: auto;
-width: 5vw;
+width: 6vw;
 }
 
 #Earth {
 grid-column: auto;
-width: 6vw;
+width: 7vw;
 }
 
 #Mars {
 grid-column: auto;
-width: 5vw;
+width: 6vw;
 }
 
 #Jupiter {
 grid-column: auto;
 width: 12vw;
+margin-left: -3vw;
 }
 
 #Saturn {
@@ -227,10 +231,13 @@ background-color: #0056b3;
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 15px;
+  padding: 1rem;
 }
 
 #nasa-description {
   font-size: 1rem;
   color: #fff;
+  margin: 2rem;
+  padding-bottom: 5rem;
 }
 
