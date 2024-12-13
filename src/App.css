@@ -11,10 +11,11 @@ body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  background-image: url("/images/background/stars.jpg");
-  background-position: center;
-  background-size: cover;
   overflow-x: hidden;
+  background-image: url("/images/background/stars.jpg");
+  background-size: 150%;
+  z-index: -1;
+  background-attachment: fixed;
 }
 
 
@@ -32,6 +33,7 @@ header {
 #logo img {
   width: 12rem;
   height: auto;
+  padding: 1rem;
 }
 
 
@@ -66,7 +68,7 @@ color: #000;
   position: relative;
   max-width: 100%;
   flex: 1;
-  padding-top: 30rem;
+  padding-top: 20rem;
   padding-bottom: 30rem;
   height: auto;
   margin: 2rem;
@@ -90,7 +92,14 @@ color: #000;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  max-width: 20rem;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  width: auto;
+  min-width: 170px;
+  max-width: 250px;
 }
 .planet-container:hover .planet-info {
 display: block;
@@ -192,23 +201,38 @@ border-radius: 20%;
 }
 
 footer {
-padding: 20px;
+padding: 40px;
 background-color: #333;
 color: #fff;
 text-align: center;
 }
 
+form label {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 1rem; 
+}
+
+form input[type="text"] {
+  margin-top: 0.5rem;
+  padding: 0.5rem; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+}
+
 button {
 padding: 10px 20px;
 margin: 2rem;
-background-color: #007BFF;
+background-color: #000;
 color: #fff;
 border: none;
 cursor: pointer;
 }
 
 button:hover {
-background-color: #0056b3;
+background-color: #fff;
+color: #000;
+transform: scale(1.2);
 }
 
 
@@ -224,20 +248,182 @@ background-color: #0056b3;
 
   .space {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    justify-items: center;
+  }
+
+  #Sun {
+    margin-left: 0;
+  }
+  #Mercury {
+    margin-left: 0;
+  }
+  #Jupiter {
+    margin-left: 0;
   }
 }
 
-#day-photo h1 {
+#day-photo h2 {
   font-size: 1.5rem;
   color: #fff;
   margin-bottom: 15px;
   padding: 1rem;
 }
 
+#day-photo h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  padding: 1rem;
+}
+
+
 #nasa-description {
   font-size: 1rem;
   color: #fff;
   margin: 2rem;
   padding-bottom: 5rem;
+}
+
+#explore {
+  padding-top: 5rem;
+  background-size: 150%;
+}
+
+
+.explore-text {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 10rem;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: scrollText 5s; 
+  margin-bottom: 15rem;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(-100%); 
+  }
+  100% {
+    transform: translateX(0); 
+  }
+}
+
+@keyframes blink-caret {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #fff;
+  }
+}
+
+.arrow-link {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-top: 1rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.arrow-bounce {
+  font-size: 2rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+  border: 2px solid #fff; 
+  border-radius: 50%; 
+  width: 50px; 
+  height: 50px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow-bounce:hover {
+  background-color: #333;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+#Solar-info {
+  text-align: center;
+  padding: 1rem;
+  padding-bottom: 15rem;
+  padding-top: 10rem;
+  max-width: 100%;
+}
+
+#Solar-info h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+#Solar-info p {
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 3rem;
+}
+
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; /* Ensure it stays behind your page content */
+  pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(100vw);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: shootingStar 2s linear infinite;
 }
 
