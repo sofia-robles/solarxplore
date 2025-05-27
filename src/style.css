@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: border-box;
 }
 * {
@@ -206,4 +206,4 @@ header {
 
 /* glow animation on planets
 make stars move in background
- */
+ */ */
