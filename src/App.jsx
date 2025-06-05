@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+import logoImage from './assets/images/solarxplore.jpg'
+import sunImage from './assets/images/planets/sun.png'
+import mercuryImage from './assets/images/planets/mercury.png'
+import venusImage from './assets/images/planets/venus.png'
+import earthImage from './assets/images/planets/earth.png'
+import marsImage from './assets/images/planets/mars.png'
+import jupiterImage from './assets/images/planets/jupiter.png'
+import saturnImage from './assets/images/planets/saturn.png'
+import uranusImage from './assets/images/planets/uranus.png'
+import neptuneImage from './assets/images/planets/neptune.png'
+
+
 const apiKey = "uymrK271gvIVrNRyQOmwCNDCt58WEdCS6YlqRyJY";
 const apiUrl = "https://api.nasa.gov/planetary/apod";
 
@@ -10,15 +22,15 @@ function App() {
   const [hoveredPlanet, setHoveredPlanet] = useState(null);
 
   const planets = [
-    { id: "Sun", name: "Sun", img: "images/planets/sun.png", info: "The Sun is a massive, glowing ball of hot plasma at the center of the Solar System. It provides light and heat, sustaining life on Earth. Composed mainly of hydrogen and helium, it generates energy through nuclear fusion in its core." },
-    { id: "Mercury", name: "Mercury", img: "images/planets/mercury.png", info: "Mercury is the smallest planet and closest to the Sun. It has a rocky surface, no atmosphere to retain heat, and extreme temperature swings between day and night." },
-    { id: "Venus", name: "Venus", img: "images/planets/venus.png", info: "Venus is similar in size to Earth but has a thick atmosphere of carbon dioxide, trapping heat and making it the hottest planet. Its surface is covered with volcanoes and toxic clouds of sulfuric acid." },
-    { id: "Earth", name: "Earth", img: "images/planets/earth.png", info: "Earth is the only planet known to support life, making it our home! It has a breathable atmosphere, liquid water, and a protective magnetic field to sustain life, as well as a diverse climate and surface." },
-    { id: "Mars", name: "Mars", img: "images/planets/mars.png", info: "Mars, the 'Red Planet', is known for its iron-rich soil giving it a reddish appearance. It has a thin atmosphere, freezing temperatures, and is being explored for its potential for past or present life." },
-    { id: "Jupiter", name: "Jupiter", img: "images/planets/jupiter.png", info: "Jupiter is the largest planet, a gas giant primarily made of hydrogen and helium. It has a Great Red Spot, which is actually a massive storm, and dozens of moons." },
-    { id: "Saturn", name: "Saturn", img: "images/planets/saturn.png", info: "Saturn is a gas giant known for its stunning ring system made of ice and rock. It is mostly hydrogen and helium and has over 80 moons." },
-    { id: "Uranus", name: "Uranus", img: "images/planets/uranus.png", info: "Uranus is an ice giant with a pale blue-green color due to methane in its atmosphere. It rotates on its side, making its axial tilt the most extreme in the solar system." },
-    { id: "Neptune", name: "Neptune", img: "images/planets/neptune.png", info: "Neptune is an ice giant with deep blue hues and the strongest winds in the solar system. It has a faint ring system and a giant storm called the Great Dark Spot." },
+    { id: "Sun", name: "Sun", img: sunImage, info: "The Sun is a massive, glowing ball of hot plasma at the center of the Solar System. It provides light and heat, sustaining life on Earth. Composed mainly of hydrogen and helium, it generates energy through nuclear fusion in its core." },
+    { id: "Mercury", name: "Mercury", img: mercuryImage, info: "Mercury is the smallest planet and closest to the Sun. It has a rocky surface, no atmosphere to retain heat, and extreme temperature swings between day and night." },
+    { id: "Venus", name: "Venus", img: venusImage, info: "Venus is similar in size to Earth but has a thick atmosphere of carbon dioxide, trapping heat and making it the hottest planet. Its surface is covered with volcanoes and toxic clouds of sulfuric acid." },
+    { id: "Earth", name: "Earth", img: earthImage, info: "Earth is the only planet known to support life, making it our home! It has a breathable atmosphere, liquid water, and a protective magnetic field to sustain life, as well as a diverse climate and surface." },
+    { id: "Mars", name: "Mars", img: marsImage, info: "Mars, the 'Red Planet', is known for its iron-rich soil giving it a reddish appearance. It has a thin atmosphere, freezing temperatures, and is being explored for its potential for past or present life." },
+    { id: "Jupiter", name: "Jupiter", img: jupiterImage, info: "Jupiter is the largest planet, a gas giant primarily made of hydrogen and helium. It has a Great Red Spot, which is actually a massive storm, and dozens of moons." },
+    { id: "Saturn", name: "Saturn", img: saturnImage, info: "Saturn is a gas giant known for its stunning ring system made of ice and rock. It is mostly hydrogen and helium and has over 80 moons." },
+    { id: "Uranus", name: "Uranus", img: uranusImage, info: "Uranus is an ice giant with a pale blue-green color due to methane in its atmosphere. It rotates on its side, making its axial tilt the most extreme in the solar system." },
+    { id: "Neptune", name: "Neptune", img: neptuneImage, info: "Neptune is an ice giant with deep blue hues and the strongest winds in the solar system. It has a faint ring system and a giant storm called the Great Dark Spot." },
   ];
 
   useEffect(() => {
@@ -68,7 +80,7 @@ function App() {
       <section id="Home"></section>
       <header>
         <div id="logo">
-          <img src="images/solarxplore.jpg" alt="Logo" className="Logo" />
+        <img src={logoImage} alt="Logo" className="Logo" />
         </div>
         <nav>
           <a href="#Home">Home</a>
